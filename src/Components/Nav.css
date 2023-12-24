@@ -1,0 +1,49 @@
+.nav-title{
+    font-family: 'Kaisei Decol', serif;
+}
+
+
+.hbg{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    border-bottom: 1px solid black;
+    transition: .5s all ease-in-out;
+}
+
+.hbg::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 1px;
+    transition: .5s all ease-in-out;
+    border-bottom:1px black solid;
+}
+
+.hbg::after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 1px;
+    transition: .5s all ease-in-out;
+    border-bottom:1px black solid;
+}
+
+
+
+.nav-true > .hbg{
+    border: transparent 1px solid;
+}
+
+.nav-true > .hbg::before{
+    top: 0;
+    transform: rotate(1665deg);
+}
+
+.nav-true > .hbg::after{
+    top: 0;
+    transform: rotate(-1665deg);
+}
